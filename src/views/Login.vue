@@ -81,7 +81,18 @@ export default {
 
 <style scoped>
 .login_container {
-  background-color: #2b4b6b;
+  background: #360033; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #0b8793,
+    #360033
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #0b8793,
+    #360033
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   height: 100%;
 }
 .login_box {
