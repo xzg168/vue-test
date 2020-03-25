@@ -57,6 +57,9 @@
             >
             </i>
           </div>
+          <div>
+            <a>{{ user }}</a>
+          </div>
         </el-header>
         <el-main>
           <!-- 路由占位符 -->
@@ -72,6 +75,14 @@ export default {
   name: 'Home',
   created() {
     this.activePath = window.sessionStorage.getItem('activePath');
+  },
+  computed: {
+    user: function() {
+      // 通过vuex的getters方法来获取state里面的数据
+      //console.log(this.$store.state.user.userName);
+      return this.$store.state.user.userName;
+      // return this.$store.getters.getUserFn;
+    },
   },
   data() {
     return {

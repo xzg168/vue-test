@@ -65,6 +65,7 @@ export default {
 
           this.$message.success('登录成功');
           window.sessionStorage.setItem('token', '1234');
+          this.$store.dispatch('setUserInfo', this.loginForm);
           this.$router.push('/home');
         } else {
           //this.$message.error('登录失败');
